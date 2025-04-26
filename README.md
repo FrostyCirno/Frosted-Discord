@@ -1,33 +1,46 @@
 # Frosted-Discord
-Discord Themes. Mainly for Vencord
 
-Base theme is Basic Backgroun from https://mwittrien.github.io/
+A collection of Discord themes for use with Vencord.
 
-### Paste these links into the online section in Vencord
+---
 
-Gloom:
-https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Gloom.css
+> **Base theme:**  
+> `https://github.com/refact0r/midnight-discord`
 
-Graphite Dark:
-https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteDark.css
+---
 
-Graphite Dark Nord:
-https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteDarkNord.css
+## How to Use
+1. Open Vencord.
+2. Go to the **Online Themes** section.
+3. Paste any of the links below to apply a theme.
 
-Graphite Light:
-https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteLight.css
+---
 
-Graphite Light Nord:
-https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteLightNord.css
+## Available Themes
 
-Grove:
-https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Grove.css
+### Gloom
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Gloom.css`
 
-Vimix Day:
-https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/VimixDay.css
+### Graphite Dark
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteDark.css`
 
-Vimix Moring:
-https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/VimixMoring.css
+### Graphite Dark Nord
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteDarkNord.css`
 
-Vimix Night:
-https://github.com/FrostyCirno/Frosted-Discord/blob/main/Themes/VimixNight.css
+### Graphite Light
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteLight.css`
+
+### Graphite Light Nord
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteLightNord.css`
+
+### Grove
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Grove.css`
+
+### Vimix Day
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/VimixDay.css`
+
+### Vimix Morning
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/VimixMorning.css`
+
+### Vimix Night
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/VimixNight.css`

@@ -5,7 +5,7 @@ A collection of Discord themes for use with Vencord.
 ---
 
 > **Base theme:**  
-> `https://github.com/refact0r/midnight-discord`
+> https://github.com/refact0r/midnight-discord
 
 ---
 

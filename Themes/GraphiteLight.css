@@ -1,116 +1,194 @@
 /**
- * @name ClearVision
- * @author ClearVision Team
- * @version 6.9.0
- * @description Highly customizable theme for BetterDiscord.
- * @source https://github.com/ClearVision/ClearVision-v6
- * @website https://clearvision.github.io
- * @invite dHaSxn3
- */
+ * @name midnight (background)
+ * @description a dark, customizable discord theme.
+ * @author refact0r
+ * @version 2.1.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
 
-/* Credits to Zerthox for making the original theme. */
+/* import theme modules */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 
-/* IMPORT CSS */
-@import url(https://clearvision.github.io/ClearVision-v6/main.css);
+body {
+    /* font options */
+    --font: 'figtree'; /* change to '' for default discord font */
+    --code-font: ''; /* change to '' for default discord font */
+    font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
 
-/* SETTINGS */
+    /* sizes */
+    --gap: 12px; /* spacing between panels */
+    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+
+    /* animation/transition options */
+    --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+    --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+    --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
+
+    /* top bar options */
+    --top-bar-height: var(--gap); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
+    --top-bar-button-position: titlebar; /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
+    --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+    --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
+
+    /* window controls */
+    --custom-window-controls: on; /* off: default window controls, on: custom window controls */
+    --window-control-size: 14px; /* size of custom window controls */
+
+    /* dms button options */
+    --custom-dms-icon: custom; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+    --dms-icon-svg-url: url('https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Images/WaveBlack.svg'); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 125%; /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+    --custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
+
+    /* background image options */
+    --background-image: on; /* off: no background image, on: enable background image (must set url variable below) */
+    --background-image-url: url('https://github.com/FrostyCirno/Frosted-Discord/blob/main/Images/Graphite_Light.png?raw=true'); /* url of the background image */
+
+    /* transparency/blur options */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+    --transparency-tweaks: on; /* off: no changes, on: remove some elements for better transparency */
+    --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --panel-blur: on; /* off: no changes, on: blur the background of panels */
+    --blur-amount: 12px; /* amount of blur */
+    --bg-floating: hsla(220, 15%, 13%, 0.9); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+
+    /* chatbar options */
+    --custom-chatbar: separated; /* off: default chatbar, aligned: chatbar aligned with the user panel, separated: chatbar separated from chat */
+    --chatbar-height: 56px; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
+    --chatbar-padding: 8px; /* padding of the chatbar. only applies in aligned mode. */
+
+    /* other options */
+    --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
+}
+
+/* color options */
 :root {
-  /* ACCENT COLORS */
-  --main-color: #2780e6; /* main accent color (hex, rgb or hsl) [default: #2780e6] */
-  --hover-color: #1e63b3; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
-  --success-color: #43b581; /* success accent color (hex, rgb or hsl) [default: #43b581] */
-  --danger-color: #982929; /* danger accent color (hex, rgb or hsl) [default: #982929] */
-  --url-color: var(--main-color); /*The color of url links [default: var(--main-color)]*/
+    --colors: on; /* off: discord default colors, on: midnight custom colors */
 
-  /* STATUS COLORS */
-  --online-color: #43b581; /* online status color (hex, rgb or hsl) [default: #43b581] */
-  --idle-color: #faa61a; /* idle status color (hex, rgb or hsl) [default: #faa61a] */
-  --dnd-color: #982929; /* dnd status color (hex, rgb or hsl) [default: #982929] */
-  --streaming-color: #593695; /* streaming status color (hex, rgb or hsl) [default: #593695] */
-  --offline-color: #808080; /* offline/invisible status color (hex, rgb or hsl) [default: #808080] */
+    /* text colors */
+    --text-0: rgb(0, 0, 0); /* text on colored elements */
+    --text-1: hsl(0, 0%, 0%); /* other normally white text */
+    --text-2: hsl(0, 0%, 0%); /* headings and important text */
+    --text-3: hsl(0, 0%, 0%); /* normal text */
+    --text-4: hsl(0, 0%, 0%); /* icon buttons and channels */
+    --text-5: hsl(0, 0%, 0%); /* muted channels/chats and timestamps */
 
-  /* GENERAL */
-  --main-font: gg sans, Helvetica Neue, Helvetica, Arial, sans-serif; /* main font for app (font must be installed) [default: gg sans, Helvetica Neue, Helvetica, Arial, sans-serif] */
-  --code-font: Consolas, Liberation Mono, Menlo, Courier, monospace; /* font for codeblocks (font must be installed) [default: Consolas, Liberation Mono, Menlo, Courier, monospace] */
-  --text-normal: rgb(220, 221, 222); /* color of default discord text */
-  --text-muted: rgb(114, 118, 125); /* color of default discord muted text (e.g.text found in input fields before typing).*/
-  --channels-width: 220px; /* channel list width (240px for Discord default) [default: 220px] */
-  --members-width: 240px; /* member list width [default: 240px] */
-  --server-unread: var(--main-color); /* Color of the icon for servers with unread messages [default: var(--main-color)] */
+    /* background and dark colors */
+    --bg-1: hsla(220, 15%, 20%, 0.6); /* dark buttons when clicked */
+    --bg-2: hsla(220, 15%, 16%, 0.6); /* dark buttons */
+    --bg-3: hsla(220, 15%, 13%, 0.6); /* spacing, secondary elements */
+    --bg-4: hsla(220, 15%, 10%, 0.6); /* main background color */
+    --hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */
+    --message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
 
-  /* APP BACKGROUND */
-  --background-shading: 100%; /* app background shading (0 for complete smoothness) [default: 100%] */
-  --background-overlay: rgba(0, 0, 0, 0.6); /* app background overlay color/gradient [default: rgba(0, 0, 0, 0.6)] */
-  --background-image: url(https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Images/Graphite_Light.png); /* app background image (link must be HTTPS) [default: url(https://clearvision.github.io/images/sapphire.jpg)]*/
-  --background-position: center; /* app background position [default: center] */
-  --background-size: cover; /* app background size [default: cover] */
-  --background-repeat: no-repeat; /* app background repeat [default: no-repeat] */
-  --background-attachment: fixed; /* app background attachment [default: fixed] */
-  --background-brightness: 100%; /* app background brightness (< 100% for darken, > 100% for lighten) [default: 100%] */
-  --background-contrast: 100%; /* app background contrast [default: 100%] */
-  --background-saturation: 100%; /* app background saturation [default: 100%] */
-  --background-invert: 0%; /* app background invert (0 - 100%)  [default: 0%] */
-  --background-grayscale: 0%; /* app background grayscale ( 0 - 100%) [default: 0%] */
-  --background-sepia: 0%; /* app background sepia (0 - 100%) [default: 0%] */
-  --background-blur: 0px; /* app background blur [default: 0px] */
+    /* accent colors */
+    --accent-1: var(--pink-1); /* links and other accent text */
+    --accent-2: var(--pink-2); /* small accent elements */
+    --accent-3: var(--pink-3); /* accent buttons */
+    --accent-4: var(--pink-4); /* accent buttons when hovered */
+    --accent-5: var(--pink-5); /* accent buttons when clicked */
+    --accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
-  /* HOME BUTTON ICON */
-  --home-icon: url(https://clearvision.github.io/icons/discord.svg); /* home button icon (link must be HTTPS) [default: url(https://clearvision.github.io/icons/discord.svg)]*/
-  --home-position: center; /* home button icon position [default: center] */
-  --home-size: 40px; /* home button icon size [default: 40px] */
+    /* status indicator colors */
+    --online: var(--green-2); /* change to #40a258 for default */
+    --dnd: var(--red-2); /* change to #d83a41 for default */
+    --idle: var(--yellow-2); /* change to #cc954c for default */
+    --streaming: var(--purple-2); /* change to ##9147ff for default */
+    --offline: var(--text-4); /* change to #82838b for default offline color */
 
-  /* CHANNEL COLORS */
-  --channel-unread: var(--main-color); /* Unread Server channel color. [default:  var(--main-color)] THIS OVERRIDES YOUR MAIN COLOR*/
-  --channel-color: rgba(255, 255, 255, 0.3); /*Read Server channel color  [default: rgba(255,255,255,0.3);]*/
-  --channel-text-selected: #fff; /* Selected channel text color, CV default is #fff */
-  --muted-color: rgba(255, 255, 255, 0.1); /*Muted channel color  [default: rgba(255,255,255,0.1);]*/
+    /* border colors */
+    --border-light: var(--hover); /* general light border color */
+    --border: var(--active); /* general normal border color */
+    --border-hover: var(--active); /* border color of panels when hovered */
+    --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
 
-  /* MODAL BACKDROP */
-  --backdrop-overlay: rgba(0, 0, 0, 0.8); /* modal backdrop overlay color/gradient [default: rgba(0, 0, 0, 0.8)] */
-  --backdrop-image: var(--background-image); /* modal backdrop image (link must be HTTPS) [default: var(--background-image)] */
-  --backdrop-position: var(--background-position); /* modal backdrop position [default: var(--background-position)] */
-  --backdrop-size: var(--background-size); /* modal backdrop size [default: var(--background-size)] */
-  --backdrop-repeat: var(--background-repeat); /* modal backdrop repeat [default: var(--background-repeat)] */
-  --backdrop-attachment: var(--background-attachment); /* modal backdrop attachment [default: var(--background-attachment)] */
-  --backdrop-brightness: var(--background-brightness); /* modal backdrop brightness (< 100% for darken, > 100% for lighten) [default: var(--background-brightness)] */
-  --backdrop-contrast: var(--background-contrast); /* modal backdrop contrast [default: var(--background-contrast)] */
-  --backdrop-saturation: var(--background-saturation); /* modal backdrop saturation [default: var(--background-saturation)] */
-  --backdrop-invert: var(--background-invert); /* modal backdrop invert (0 - 100%)  [default: var(--background-invert)] */
-  --backdrop-grayscale: var(--background-grayscale); /* modal backdrop grayscale ( 0 - 100%) [default: var(--background-grayscale)] */
-  --backdrop-sepia: var(--background-sepia); /* modal backdrop sepia (0 - 100%) [default: var(--background-sepia)] */
-  --backdrop-blur: var(--background-blur); /* modal backdrop blur [default: var(--background-blur)] */
+    /* base colors + extras */
+    --red-1: oklch(75% 0.12 0);
+    --red-2: oklch(70% 0.12 0);
+    --red-3: oklch(65% 0.12 0);
+    --red-4: oklch(60% 0.12 0);
+    --red-5: oklch(55% 0.12 0);
 
-  /* USER POPOUT BACKGROUND */
-  --user-popout-image: var(--background-image); /* app background image (link must be HTTPS) [default: var(--background-image)] */
-  --user-popout-position: var(--background-position); /* user popout background position [default: var(--background-position)] */
-  --user-popout-size: var(--background-size); /* user popout background size [default: var(--background-size)] */
-  --user-popout-repeat: var(--background-repeat); /* user popout background repeat [default: var(--background-repeat)] */
-  --user-popout-attachment: var(--background-attachment); /* user popout background attachment [default: var(--background-attachment)] */
-  --user-popout-brightness: var(--background-brightness); /* user popout background brightness (< 100% for darken, > 100% for lighten) [default: var(--background-brightness)] */
-  --user-popout-contrast: var(--background-contrast); /* user popout background contrast [default: var(--background-contrast)] */
-  --user-popout-saturation: var(--background-saturation); /* user popout background saturation [default: var(--background-saturation)] */
-  --user-popout-invert: var(--background-invert); /* user popout background invert (0 - 100%) [default: var(--background-invert)] */
-  --user-popout-grayscale: var(--background-grayscale); /* user popout background grayscale (0 - 100%) [default: var(--background-grayscale)] */
-  --user-popout-sepia: var(--background-sepia); /* user popout background sepia (0 - 100%) [default: var(--background-sepia)] */
-  --user-popout-blur: calc(var(--background-blur) + 3px); /* user popout background blur [default: calc(var(--background-blur) + 3px)] */
-  --user-popout-overlay: rgba(0, 0, 0, 0.6); /* user popout overlay color [default: rgba(0, 0, 0, .6)] */
+    --green-1: oklch(75% 0.11 170);
+    --green-2: oklch(70% 0.11 170);
+    --green-3: oklch(65% 0.11 170);
+    --green-4: oklch(60% 0.11 170);
+    --green-5: oklch(55% 0.11 160);
 
-  /* USER MODAL BACKGROUND */
-  --user-modal-image: var(--background-image); /* app background image (link must be HTTPS) [default: var(--background-image)] */
-  --user-modal-position: var(--background-position); /* user modal background position [default: var(--background-position)] */
-  --user-modal-size: var(--background-size); /* user modal background size [default: var(--background-size)] */
-  --user-modal-repeat: var(--background-repeat); /* user modal background repeat [default: var(--background-repeat)] */
-  --user-modal-attachment: var(--background-attachment); /* user modal background attachment [default: var(--background-attachment)] */
-  --user-modal-brightness: var(--background-brightness); /* user modal background brightness (< 100% for darken, > 100% for lighten) [default: var(--background-brightness)] */
-  --user-modal-contrast: var(--background-contrast); /* user modal background contrast [default: var(--background-contrast)] */
-  --user-modal-saturation: var(--background-saturation); /* user modal background saturation [default: var(--background-saturation)] */
-  --user-modal-invert: var(--background-invert); /* user modal background invert (0 - 100%) [default: var(--background-invert)] */
-  --user-modal-grayscale: var(--background-grayscale); /* user modal background grayscale (0 - 100%) [default: var(--background-grayscale)] */
-  --user-modal-sepia: var(--background-sepia); /* user modal background sepia (0 - 100%) [default: var(--background-sepia)] */
-  --user-modal-blur: calc(var(--background-blur) + 3px); /* user modal background blur [default: calc(var(--background-blur) + 3px)] */
+    --blue-1: oklch(75% 0.1 215);
+    --blue-2: oklch(70% 0.1 215);
+    --blue-3: oklch(65% 0.1 215);
+    --blue-4: oklch(60% 0.1 215);
+    --blue-5: oklch(55% 0.1 215);
 
-  /* THEME BD COLORS */
-  --bd-blue: var(--main-color); /* betterdiscord main color [default: var(--main-color)] */
-  --bd-blue-hover: var(--hover-color); /* betterdiscord hover color [default: var(--hover-color)] */
-  --bd-blue-active: var(--hover-color); /* betterdiscord active color [default: var(--hover-color)] */
+    --yellow-1: oklch(80% 0.11 90);
+    --yellow-2: oklch(75% 0.11 90);
+    --yellow-3: oklch(70% 0.11 90);
+    --yellow-4: oklch(65% 0.11 90);
+    --yellow-5: oklch(60% 0.11 90);
+
+    --purple-1: oklch(75% 0.11 310);
+    --purple-2: oklch(70% 0.11 310);
+    --purple-3: oklch(65% 0.11 310);
+    --purple-4: oklch(60% 0.11 310);
+    --purple-5: oklch(55% 0.11 310);
+
+    --orange-1: oklch(75% 0.13 55);
+    --orange-2: oklch(70% 0.13 55);
+    --orange-3: oklch(65% 0.13 55);
+    --orange-4: oklch(60% 0.13 55);
+    --orange-5: oklch(55% 0.13 55);
+
+    --teal-1: oklch(75% 0.09 180);
+    --teal-2: oklch(70% 0.09 180);
+    --teal-3: oklch(65% 0.09 180);
+    --teal-4: oklch(60% 0.09 180);
+    --teal-5: oklch(55% 0.09 180);
+
+    --pink-1: oklch(75% 0.12 345);
+    --pink-2: oklch(70% 0.12 345);
+    --pink-3: oklch(65% 0.12 345);
+    --pink-4: oklch(60% 0.12 345);
+    --pink-5: oklch(55% 0.12 345);
+
+    --cyan-1: oklch(75% 0.1 200);
+    --cyan-2: oklch(70% 0.1 200);
+    --cyan-3: oklch(65% 0.1 200);
+    --cyan-4: oklch(60% 0.1 200);
+    --cyan-5: oklch(55% 0.1 200);
+
+    --lime-1: oklch(80% 0.12 120);
+    --lime-2: oklch(75% 0.12 120);
+    --lime-3: oklch(70% 0.12 120);
+    --lime-4: oklch(65% 0.12 120);
+    --lime-5: oklch(60% 0.12 120);
+
+    --indigo-1: oklch(75% 0.11 270);
+    --indigo-2: oklch(70% 0.11 270);
+    --indigo-3: oklch(65% 0.11 270);
+    --indigo-4: oklch(60% 0.11 270);
+    --indigo-5: oklch(55% 0.11 270);
+
+    --white-1: oklch(95% 0.02 0);
+    --white-2: oklch(90% 0.03 0);
+    --white-3: oklch(85% 0.04 0);
+    --white-4: oklch(80% 0.05 0);
+    --white-5: oklch(75% 0.06 0);
 }

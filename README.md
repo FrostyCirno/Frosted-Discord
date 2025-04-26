@@ -40,7 +40,7 @@ A collection of Discord themes for use with Vencord.
 `https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/VimixDay.css`
 
 ### Vimix Morning
-`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/VimixMorning.css`
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/VimixMoring.css`
 
 ### Vimix Night
 `https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/VimixNight.css`

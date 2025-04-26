@@ -24,14 +24,8 @@ A collection of Discord themes for use with Vencord.
 ### Graphite Dark
 `https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteDark.css`
 
-### Graphite Dark Nord
-`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteDarkNord.css`
-
 ### Graphite Light
 `https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteLight.css`
-
-### Graphite Light Nord
-`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteLightNord.css`
 
 ### Grove
 `https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Grove.css`

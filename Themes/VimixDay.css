@@ -77,12 +77,12 @@ body {
     --colors: on; /* off: discord default colors, on: midnight custom colors */
 
     /* text colors */
-    --text-0: rgb(0, 0, 0); /* text on colored elements */
-    --text-1: hsl(0, 0%, 0%); /* other normally white text */
-    --text-2: hsl(0, 0%, 0%); /* headings and important text */
-    --text-3: hsl(0, 0%, 0%); /* normal text */
-    --text-4: hsl(0, 0%, 0%); /* icon buttons and channels */
-    --text-5: hsl(0, 0%, 0%); /* muted channels/chats and timestamps */
+    --text-0: hsla(220, 15%, 10%, 1); /* text on colored elements */
+    --text-1: hsl(0, 0%, 100%); /* other normally white text */
+    --text-2: hsl(220, 25%, 85%); /* headings and important text */
+    --text-3: hsl(221, 33%, 79%); /* normal text */
+    --text-4: hsl(220, 31%, 70%); /* icon buttons and channels */
+    --text-5: hsl(220, 17%, 53%); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
     --bg-1: hsla(220, 15%, 20%, 0.6); /* dark buttons when clicked */

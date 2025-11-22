@@ -30,6 +30,17 @@ A collection of Discord themes for use with Vencord.
 ### Cirno
 `https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Grove.css`
 
+### Reimu
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Reimu.css`
+
+### Yukari
+
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Yukari.css`
+
+### Flandre
+
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Flandre.css`
+
 ### Vimix Day
 `https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/VimixDay.css`
 

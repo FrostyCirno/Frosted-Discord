@@ -27,7 +27,7 @@ A collection of Discord themes for use with Vencord.
 ### Graphite Light
 `https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteLight.css`
 
-### Grove
+### Cirno
 `https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Grove.css`
 
 ### Vimix Day

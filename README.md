@@ -28,7 +28,7 @@ A collection of Discord themes for use with Vencord.
 `https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/GraphiteLight.css`
 
 ### Cirno
-`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Grove.css`
+`https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Cirno.css`
 
 ### Reimu
 `https://raw.githubusercontent.com/FrostyCirno/Frosted-Discord/refs/heads/main/Themes/Reimu.css`
